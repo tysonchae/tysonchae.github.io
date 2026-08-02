@@ -1,0 +1,17 @@
+---
+layout: default
+title: Search
+permalink: /search/
+---
+<section class="page search-page">
+  <h1>Search</h1>
+  <div id="search"></div>
+</section>
+
+<link href="{{ '/pagefind/pagefind-ui.css' | relative_url }}" rel="stylesheet">
+<script src="{{ '/pagefind/pagefind-ui.js' | relative_url }}"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+</script>

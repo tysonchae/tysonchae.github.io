@@ -1,34 +1,34 @@
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+title: Tyson Chae
+tagline: "feat: notes from building software with people"
+description: >-
+  Notes from inside a dev team — process, culture, incidents,
+  retros, and the messy parts of building software with people.
+url: "https://tysonchae.github.io"
+author: Tyson Chae
 
-# Build settings
 markdown: kramdown
-permalink: pretty
-plugins:
-  - jekyll-sitemap
-compress_html:
-  clippings: all
-  comments: all
-  startings: [html, head, body]
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
-# Pages Path
+permalink: /:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
 defaults:
   - scope:
-      path: "_pages"
+      type: posts
     values:
-      permalink: /:basename:output_ext
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: default
 
-include:
-  - _pages
-
-sass:
-  sass_dir: assets/scss
-  style: compressed
-
-# Exclude from processing.
 exclude:
   - Gemfile
   - Gemfile.lock
-  - LICENSE.text
+  - node_modules
   - README.md
-  - SECURITY.md

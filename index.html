@@ -1,23 +1,23 @@
 ---
 layout: default
+title: Home
 ---
+<section class="hero">
+  <p class="eyebrow">hello, I'm Tyson</p>
+  <h1 class="hero-title">Working in a dev team is<br>never just about the code.</h1>
+  <p class="hero-sub">{{ site.description }}</p>
+</section>
 
-{% include hero-section.html %}
-
-{% include about-section.html %}
-
-{% include skills-section.html %}
-
-{% include experience-section.html %}
-
-{% include education-section.html %}
-
-{% include services-section.html %}
-
-{% include portfolio-section.html %}
-
-{% include testimonial-section.html %}
-
-{% include client-section.html %}
-
-{% include blog-section.html %}
+<section class="post-log">
+  {% for post in site.posts %}
+  <a class="log-entry" href="{{ post.url | relative_url }}">
+    <span class="log-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+    <span class="log-body">
+      <span class="log-title">{{ post.title }}</span>
+      <span class="log-excerpt">{{ post.excerpt | strip_html | truncate: 110 }}</span>
+    </span>
+  </a>
+  {% else %}
+  <p class="empty">No posts yet. Add a markdown file to <code>_posts/</code> to get started.</p>
+  {% endfor %}
+</section>

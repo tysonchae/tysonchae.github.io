@@ -1,28 +1,13 @@
-<header class="navigation fixed-top">
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand font-tertiary h3" href="{{ site.baseurl }}/">
-      {% if site.data.settings.logo %}
-        <img src="{{ site.data.settings.logo | absolute_url }}" alt="{{ site.data.settings.title }}">
-        {% else if %}
-        <h3 class="text-white font-tertiary">{{site.data.settings.title}}</h3>
-      {% endif %}
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="wordmark" href="{{ '/' | relative_url }}">{{ site.title }}</a>
 
-    <div class="collapse navbar-collapse text-center" id="navigation">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="{{ site.baseurl }}/">Home</a>
-        </li>
-        {% for link in site.data.settings.menu %}
-          <li class="nav-item {{ class }}">
-            <a class="nav-link" href="{{ link.link }}">{{ link.name }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </nav>
+    <nav class="site-nav">
+      <a href="{{ '/search/' | relative_url }}">Search</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" type="button">
+        <span class="theme-toggle-dot"></span>
+      </button>
+    </nav>
+  </div>
 </header>

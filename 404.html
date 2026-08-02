@@ -1,15 +1,9 @@
 ---
-layout: page
+layout: default
 title: Page not found
-image:
 permalink: /404.html
 ---
-<div class="container">
-  <div class="row">
-    <div class="col col-12" style="text-align: center">
-      <h2>404</h2>
-      <p>The requested page could not be found.</p>
-      <p><a href="{{site.baseurl}}/">Back to the bLog</a></p>
-    </div>
-  </div>
-</div>
+<section class="page">
+  <h1>404</h1>
+  <p>This page doesn't exist. <a href="{{ '/' | relative_url }}">Back to home</a>.</p>
+</section>

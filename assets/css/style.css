@@ -1,0 +1,370 @@
+/* ---------- Design tokens ---------- */
+:root {
+  --bg: #F7F6F3;
+  --ink: #1F2421;
+  --muted: #6B7280;
+  --accent: #3D5A80;
+  --accent-soft: #E8EDF2;
+  --line: #DDD9D0;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+  --wrap: 680px;
+}
+
+[data-theme="dark"] {
+  --bg: #15181B;
+  --ink: #ECEAE4;
+  --muted: #9AA0A6;
+  --accent: #8FB4DA;
+  --accent-soft: #1E2A33;
+  --line: #2B2F33;
+}
+
+* { box-sizing: border-box; }
+
+html { color-scheme: light dark; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.wrap {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  border-bottom: 1px solid var(--line);
+  padding: 22px 0;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 19px;
+  letter-spacing: -0.01em;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.site-nav a {
+  color: var(--muted);
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.theme-toggle {
+  width: 32px;
+  height: 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--accent-soft);
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  transition: transform 0.2s ease;
+}
+
+[data-theme="dark"] .theme-toggle-dot {
+  transform: translateX(14px);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 64px 0 40px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 8px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent);
+  margin: 0 0 14px;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0 0 18px;
+}
+
+.hero-sub {
+  color: var(--muted);
+  font-size: 17px;
+  max-width: 52ch;
+  margin: 0 0 8px;
+}
+
+/* ---------- Post log (home list) ---------- */
+.post-log {
+  padding: 12px 0 64px;
+}
+
+.log-entry {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.log-entry:hover .log-title {
+  color: var(--accent);
+}
+
+.log-date {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+  flex-shrink: 0;
+  padding-top: 3px;
+  width: 92px;
+}
+
+.log-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.log-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 19px;
+  transition: color 0.15s ease;
+}
+
+.log-excerpt {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.empty {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  padding: 40px 0;
+}
+
+/* ---------- Post page ---------- */
+.main {
+  padding: 48px 0 80px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+
+.back-link {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.back-link:hover { color: var(--accent); }
+
+.post-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin: 18px 0 14px;
+}
+
+.post-meta {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.dot { margin: 0 6px; }
+
+.tag {
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-right: 4px;
+}
+
+.post-content {
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.post-content p { margin: 0 0 22px; }
+
+.post-content h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 26px;
+  margin: 44px 0 16px;
+}
+
+.post-content h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 21px;
+  margin: 36px 0 14px;
+}
+
+.post-content a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.post-content blockquote {
+  margin: 28px 0;
+  padding-left: 18px;
+  border-left: 2px solid var(--accent);
+  color: var(--muted);
+  font-style: italic;
+}
+
+.post-content code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--accent-soft);
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.post-content pre {
+  background: var(--ink);
+  color: var(--bg);
+  padding: 18px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.post-content pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+.post-content ul, .post-content ol {
+  margin: 0 0 22px;
+  padding-left: 22px;
+}
+
+.post-content img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+.post-footer {
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+/* ---------- Generic page (about, 404, search) ---------- */
+.page {
+  padding: 24px 0 60px;
+}
+
+.page h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 32px;
+  margin: 0 0 20px;
+}
+
+.page p {
+  color: var(--muted);
+  font-size: 17px;
+  max-width: 56ch;
+}
+
+.search-page #search {
+  margin-top: 24px;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 0 48px;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.footer-links a {
+  margin-left: 16px;
+}
+
+.footer-links a:hover { color: var(--accent); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  .hero-title { font-size: 30px; }
+  .log-entry { flex-direction: column; gap: 6px; }
+  .log-date { width: auto; }
+  .post-title { font-size: 27px; }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+
+/* ---------- Focus visibility ---------- */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

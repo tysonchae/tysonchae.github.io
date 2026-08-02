@@ -1,34 +1,25 @@
 <head>
   <meta charset="utf-8">
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.data.settings.title }}{% endif %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
 
-  <!-- mobile responsive meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="{%if page.description%}{{page.description}}{%else%}{{site.data.settings.description}}{%endif%}">
-  
-  <!-- theme meta -->
-  <meta name="theme-name" content="kross-jekyll" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
 
-    
-  {% if site.author %}
-  <meta name="author" content="{{ . }}">
-  {% endif %}
-  
-  <!-- ** Plugins Needed for the Project ** -->
-  {% for css in site.data.plugins.css %}
-  <link rel="stylesheet" href="{{ css | relative_url }}">
-  {% endfor %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Main Stylesheet -->
-  <link href="{{ '/assets/scss/style.css' | relative_url }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
-  <!--Favicon-->
-  <link rel="shortcut icon" href="{{ '/assets/images/favicon.png' | relative_url }} " type="image/x-icon">
-  <link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }} " type="image/x-icon">
-
-  <!-- google analytics -->
-  {% if site.data.settings.google-analytics %}
-    {% include google-analytics.html %}
-  {% endif %}
-
+  <script>
+    // Apply saved theme before paint to avoid flash
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
 </head>
