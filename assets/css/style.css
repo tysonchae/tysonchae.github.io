@@ -184,6 +184,10 @@ a {
   line-height: 1.5;
 }
 
+.log-tags {
+  margin-top: 2px;
+}
+
 .empty {
   color: var(--muted);
   font-family: var(--font-mono);
@@ -233,6 +237,43 @@ a {
   border-radius: 4px;
   font-size: 12px;
   margin-right: 4px;
+  display: inline-block;
+  transition: background 0.15s ease;
+}
+
+a.tag:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.tag-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 40px;
+}
+
+.tag-index .tag {
+  font-family: var(--font-mono);
+}
+
+.tag-group {
+  margin-bottom: 48px;
+  scroll-margin-top: 24px;
+}
+
+.tag-group-title {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--muted);
+  text-transform: lowercase;
+  margin: 0 0 4px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.tag-group .post-log {
+  padding: 0;
 }
 
 .post-content {

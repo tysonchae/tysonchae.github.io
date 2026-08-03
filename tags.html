@@ -1,0 +1,32 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+<section class="page">
+  <h1>Tags</h1>
+
+  <nav class="tag-index">
+    {% assign sorted_tags = site.tags | sort %}
+    {% for tag in sorted_tags %}
+    <a href="#{{ tag[0] | slugify }}" class="tag">{{ tag[0] }}</a>
+    {% endfor %}
+  </nav>
+
+  {% for tag in sorted_tags %}
+  <div class="tag-group" id="{{ tag[0] | slugify }}">
+    <h2 class="tag-group-title"># {{ tag[0] }}</h2>
+    <div class="post-log">
+      {% for post in tag[1] %}
+      <a class="log-entry" href="{{ post.url | relative_url }}">
+        <span class="log-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+        <span class="log-body">
+          <span class="log-title">{{ post.title }}</span>
+          <span class="log-excerpt">{{ post.excerpt | strip_html | truncate: 110 }}</span>
+        </span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</section>
