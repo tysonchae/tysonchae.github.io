@@ -3,57 +3,90 @@ title: "Where My Work Ends"
 tags: [team, culture, retro]
 ---
 
-# Where My Work Ends
+When you've been leading a project, or even just owning a piece of it, sooner or later a release date lands on top of your vacation.
 
-When you've been leading a project, or even just owning a piece of it, sooner or later the release date lands on top of your vacation. The obvious right answer is to stay involved, close out everything you can, and leave with your part handled. It rarely goes that cleanly.
+A teammate went on vacation without much of a handoff. The developer who stayed behind had to piece together the commits and prepare the release build.
 
-People rotate in and out. Someone joins to help with one piece, that piece grows, and eventually they know it better than I do. Then staffing shifts and they're pulled off, then back on, then off again. After a few rounds of that, I couldn't always tell you which parts I actually touched.
+Most of the code wasn't his.
 
-## Being the one left behind
+He was also the one who would have to press the button.
 
-A teammate left for vacation without handing anything off. The developer who stayed had to assemble the commits and prep the release build. Mostly code he hadn't written, and he was the one who'd have to press the button.
+You could tell he wasn't comfortable with it, so I offered to go through it together. We looked at the commits one by one and checked the release build against them to make sure nothing had been missed.
 
-You could see it on him.
+It wasn't difficult work. He could read the code just fine. He's honestly a stronger engineer than I am.
 
-So I offered to go through it together. We walked the commits one by one and checked the release build against them to make sure nothing had been dropped. It wasn't hard work. It just mattered a lot whether he did it alone or not.
+What he seemed to need wasn't technical help. It was knowing that if the call turned out to be wrong, he wasn't going to be the only one standing there with it.
 
-What struck me afterward was that he never needed technical help. He demonstrates outstanding technical proficiency and operates at a level well above my own. He could read the code fine. What he didn't have was the sense that if the call turned out to be wrong, he wasn't going to eat it by himself. Sitting there looking at the same screen gave him that.
+So we sat there and went through it together.
 
-Release stress almost never comes from the difficulty of the work. It comes from carrying it alone.
+That stuck with me.
 
-## The last-commit trap
+Release stress often has less to do with how difficult the work is than with whether someone feels like they're carrying it alone.
 
-When the teammate came back from vacation, he said something like: you wrote the last commit, so you'd know better than me. I don't know that part.
+When the person who'd been away came back, he said something like:
 
-That one stuck with me. It sounds reasonable and it isn't true, and more importantly it points the wrong way.
+> "You were the last one in that code, so you'd know it better than I would."
 
-Whoever touched something last is not automatically the person who understands it. He had read someone else's code fast enough to get a build out — that's it. Why it was designed that way, what got tried and thrown away, where it's fragile: only the original author knows any of that. What the code does, you can read. Why it ended up like that disappears unless someone writes it down.
+It sounded reasonable, but something about it bothered me.
 
-The bigger problem is what that sentence sets up. Nobody asked him to take on that risk. He covered for someone who wasn't there. Treating that as a transfer of ownership means **the person who filled the gap gets stuck with it for filling it.** Do that a few times and people stop reaching into anyone else's area. What you lose is worth far more than one piece of code.
+Being the last person to touch something doesn't mean you understand it best.
 
-## What I landed on
+The developer who stayed had read someone else's code quickly enough to get a release out. He could tell you what the code did. He couldn't possibly know all the reasons it had ended up that way, what had already been tried, or where the fragile parts were.
 
-**My code isn't the boundary.**
-If I was part of how something got built, I should care about it through to the end. Even when most of what's shipping came from someone else, I want to look at it, and I want whoever's shipping it to feel steady going in. That's part of the job.
+Those things disappear pretty quickly if nobody writes them down.
 
-**Start from them, not from me.**
-"I should take a look at this" lands as an inspection no matter how carefully you say it, and the moment it reads as distrust, the intent stops mattering. So I start with what do you need from me before I'm gone. Then checking things is a response to a request, and it turns into two people looking at the same screen.
+But the bigger problem was what that sentence seemed to imply.
 
-**Build ownership you can hand off, not ownership you hold.**
-Just resolving to see everything through doesn't scale. Add a couple more projects and I'm either the bottleneck or I'm burned out. Getting things to a state where they run without me — that's the actual job.
+He hadn't chosen to take ownership of that code. He had simply been the person who stayed while someone else was away.
 
-Which means what needs writing down isn't an explanation of the code. It's why the decisions went the way they did, where the sharp edges are, how to roll back, and what has to happen before someone should call me. Ownership that only lives in my head leaves when I do.
+If the person who fills a gap becomes the owner of whatever they happened to touch, then eventually people learn not to fill gaps.
 
-**Attach the checking to the process, not to a person.**
-A release checklist, rollback criteria, post-deploy verification steps — once those exist on paper, nobody is auditing anybody. You're both just reading the same document. What we did going through those commits was really an improvised version of that checklist.
+And that's a much bigger problem than one messy release.
 
-**Being the shield is the most useful thing I can offer.**
-There are areas where the other person knows more than I do. Me reading their code adds nothing technical. What I can add is context, history, and cover. The strongest reassurance you can leave before vacation isn't a code review — it's saying that if this breaks, it's on me. And it counts for more said in front of the team than said one-on-one.
+I've always thought of ownership as something attached to the work I actually built. If I wrote it, I should care about it through to the end.
 
-## What's still unfinished
+I still think that's true.
 
-If this stays a private standard I hold myself to, nothing about the team changes. You just end up with one person who covers more and one who still doesn't, and that gap turns into quiet resentment eventually.
+But I'm starting to think ownership has less to do with where my code ends and more to do with what happens when I'm not there.
 
-So it has to become a team norm instead of a personal one. A one-page handoff before vacation: what's in flight, what's risky, how to roll back, when to call. And a rule that a release has a named owner, not just a last committer. You can fix the problem that way without making it about a person.
+If I helped build something, I should care about it making it safely to the other side, even if someone else is the one releasing it.
 
-And I owe the developer who got left holding it a conversation. That was never yours to carry alone. I think that lands harder than the stress did — being treated like it was just his to deal with is the part that sticks.
+That doesn't mean I need to check everything myself. If I do, I've just made myself the bottleneck.
+
+The better outcome is that someone else can take over without needing me.
+
+That probably means some of the things I carry in my head need to exist somewhere else: why we made certain decisions, where the sharp edges are, what to check before release, and what to do if something goes wrong.
+
+Not because documentation is the answer to everything.
+
+Just because ownership that only exists in one person's head leaves when they do.
+
+And sometimes what another person needs from me isn't technical help anyway.
+
+There are plenty of areas where they know more than I do. What I can offer is context, history, and a little cover.
+
+That was probably what I was really doing when I sat next to my teammate that day.
+
+Not reviewing his code.
+
+Just making sure he didn't have to carry the uncertainty by himself.
+
+I don't think this is solved yet.
+
+If I keep being the person who notices the gap and jumps in to cover it, then nothing about the team has really changed. I've just become the person who absorbs the gaps.
+
+I'd rather get to a place where a vacation means a normal handoff, where a release has a clear owner, and where the next person doesn't have to reconstruct the whole story from a pile of commits.
+
+Nothing complicated.
+
+Just enough that going on vacation doesn't mean someone else inherits a mystery.
+
+And I still owe that developer a conversation.
+
+That was never his to carry alone.
+
+I think that's the part that stays with me.
+
+Not that the release was stressful.
+
+That he was made to feel like it was simply his problem to deal with.
