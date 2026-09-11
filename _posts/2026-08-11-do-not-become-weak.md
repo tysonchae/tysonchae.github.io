@@ -10,7 +10,7 @@ While we were working on the project, I got along really well with the dev respo
 
 One day, however, one of the QAs on my team quietly came over to me and asked,
 
-“Do you know when he(the dev responsible for that repo) will finish their changes?”
+“Do you know when he(the dev res ponsible for that repo) will finish their changes?”
 
 I told him I wasn’t sure.
 
@@ -86,4 +86,4 @@ And another question:
 
 Looking back, that brief experience and a single piece of advice changed the way I work and the way I treat people.
 
-More importantly, they became a turning point that helped me grow—not just as a developer, but as a person.
+More importantly, they became a turning point that helped me grow, not just as a developer, but as a person.
