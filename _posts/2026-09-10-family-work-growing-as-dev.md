@@ -1,4 +1,3 @@
-
 ---
 title: "Family, Work, and Growing as a Developer"
 tags: [team, culture, retro]
