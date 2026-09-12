@@ -1,6 +1,6 @@
 ---
 title: "Where My Work Ends"
-tags: [team, culture, retro]
+tags: [ownership, team-culture]
 ---
 
 

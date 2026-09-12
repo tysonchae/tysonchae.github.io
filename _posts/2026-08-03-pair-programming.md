@@ -1,6 +1,6 @@
 ---
 title: "AI, the New Pair Programmer"
-tags: [team, culture, retro, ai]
+tags: [ai, growth, team-culture]
 ---
 
 Up until last year, I watched a ton of live coding streams on YouTube. Seeing other developers turn app ideas into reality was incredibly insightful—it let me see how they brainstormed and worked through the build process one step at a time.

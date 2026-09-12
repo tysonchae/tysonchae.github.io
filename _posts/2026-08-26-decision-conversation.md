@@ -1,6 +1,6 @@
 ---
 title: "What Decision Does This Person Need to Make Right Now?"
-tags: [team, culture, retro]
+tags: [communication, leadership, retro]
 ---
 
 I want to write down a mistake I made a few days ago.

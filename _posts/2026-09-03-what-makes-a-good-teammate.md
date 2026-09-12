@@ -1,6 +1,6 @@
 ---
 title: "What Makes a Good Teammate?"
-tags: [team, culture, retro]
+tags: [mentorship, feedback, team-culture, growth]
 ---
 
 When I worked as a contractor across different sites, I mostly worked on short-term projects. In a relatively short period of time, I got to meet many different people and work in very different environments.

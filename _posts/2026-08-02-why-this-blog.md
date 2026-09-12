@@ -1,6 +1,6 @@
 ---
 title: "Why this blog exists"
-tags: [meta]
+tags: [meta, team-culture]
 ---
 
 Most engineering blogs are tutorials. This one isn't going to be that.

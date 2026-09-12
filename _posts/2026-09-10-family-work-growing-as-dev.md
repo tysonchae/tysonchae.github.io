@@ -1,6 +1,6 @@
 ---
 title: "Family, Work, and Growing as a Developer"
-tags: [team, culture, retro]
+tags: [work-life, growth, career]
 ---
 
 For a long time, I lived away from my family and, in many ways, lived almost like a single person. As I got used to living alone, I realized that outside of work, there wasn’t much else that demanded my attention.

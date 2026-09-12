@@ -1,6 +1,6 @@
 ---
 title: "Don’t Become Weak"
-tags: [team, culture, retro]
+tags: [mindset, growth, retro]
 ---
 
 
