@@ -7,11 +7,7 @@ Over lunch today, I told a teammate that I’ve lost my passion for work. Honest
 
 I can think of a few reasons why. But whatever the reasons are, this is where I am right now.
 
-> In this line of work, you inevitably run into complicated, tangled problems. When you do, you have to dig persistently into things that aren’t visible on the surface. 
-
-> I believe this is where skill really separates people. When I look back at analysis or debugging work where I missed something that a principal developer later found, the gap was razor-thin. 
-
-There were so many moments where I thought, if I had just looked at one more line, I would have found it first.
+> In this line of work, you inevitably run into complicated, tangled problems. When you do, you have to dig persistently into things that aren’t visible on the surface. I believe this is where skill really separates people. When I look back at analysis or debugging work where I missed something that a principal developer later found, the gap was razor-thin. There were so many moments where I thought, if I had just looked at one more line, I would have found it first. But that razor-thin gap is exactly the one that never closes.
 
 But that persistence has worn down. I’m tired. Chasing down clues and digging deeper has become exhausting, and the fatigue weighs heavily. Back when I was fully engaged, that persistence itself was fun and fulfilling. Now, I feel like I’m giving up on myself. Every time a new clue appears, a bit of curiosity still sparks, that “wait, what’s this?” feeling, but weariness comes up right alongside it.
 
