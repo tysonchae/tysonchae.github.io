@@ -1,6 +1,6 @@
 ---
 title: "Learning to Be Strong, One Habit at a Time"
-tags: [work-life, growth, career]
+tags: [health, mindset, work-life]
 ---
 
 Compared to when I was a young developer in my twenties, what has changed? I’m not talking about a broader perspective or sharper skills. I’m talking about my body, and most of the changes aren’t welcome ones.

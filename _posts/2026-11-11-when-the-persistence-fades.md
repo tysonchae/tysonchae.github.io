@@ -1,6 +1,6 @@
 ---
 title: "When the Persistence Fades"
-tags: [work-life, growth, career]
+tags: [burnout, mindset, ownership, career]
 ---
 
 Over lunch today, I told a teammate that I’ve lost my passion for work. Honestly, this didn’t start today. It’s been going on since around September or October, so it’s been a month or two now.
